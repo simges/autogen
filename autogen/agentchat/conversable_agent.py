@@ -139,6 +139,7 @@ class ConversableAgent(LLMAgent):
             if is_termination_msg is not None
             else (lambda x: content_str(x.get("content")) == "TERMINATE")
         )
+
         # Take a copy to avoid modifying the given dict
         if isinstance(llm_config, dict):
             llm_config = copy.deepcopy(llm_config)
@@ -743,7 +744,6 @@ class ConversableAgent(LLMAgent):
                         sep="",
                     )
                     iostream.print(colored("*" * len(func_print), "green"), flush=True)
-
         iostream.print("\n", "-" * 80, flush=True, sep="")
 
     def _process_received_message(self, message: Union[Dict, str], sender: Agent, silent: bool):
@@ -1297,6 +1297,7 @@ class ConversableAgent(LLMAgent):
             return False, None
         if messages is None:
             messages = self._oai_messages[sender]
+
         extracted_response = self._generate_oai_reply_from_client(
             client, self._oai_system_message + messages, self.client_cache
         )
@@ -1305,6 +1306,7 @@ class ConversableAgent(LLMAgent):
     def _generate_oai_reply_from_client(self, llm_client, messages, cache) -> Union[str, Dict, None]:
         # unroll tool_responses
         all_messages = []
+
         for message in messages:
             tool_responses = message.get("tool_responses", [])
             if tool_responses:
@@ -1321,6 +1323,7 @@ class ConversableAgent(LLMAgent):
             messages=all_messages,
             cache=cache,
         )
+
         extracted_response = llm_client.extract_text_or_completion_object(response)[0]
 
         if extracted_response is None:
@@ -2182,10 +2185,14 @@ class ConversableAgent(LLMAgent):
         if func is not None:
             # Extract arguments from a json-like string and put it into a dict.
             input_string = self._format_json_str(func_call.get("arguments", "{}"))
-            try:
-                arguments = json.loads(input_string)
+            arguments = None
+            try:                
+                if isinstance(func_call.get("arguments"), str):
+                    arguments = json.loads(input_string)
+                if isinstance(func_call.get("arguments"), dict):
+                    arguments = func_call.get("arguments")
+
             except json.JSONDecodeError as e:
-                arguments = None
                 content = f"Error: {e}\n You argument should follow json format."
 
             # Try to execute the function
@@ -2199,6 +2206,17 @@ class ConversableAgent(LLMAgent):
                     is_exec_success = True
                 except Exception as e:
                     content = f"Error: {e}"
+            else:
+                iostream.print(
+                    colored(f"\n>>>>>>>> EXECUTING FUNCTION {func_name}...", "magenta"),
+                    flush=True,
+                )
+                try:
+                    content = func()
+                    is_exec_success = True
+                except Exception as e:
+                    content = f"Error: {e}"
+                
         else:
             content = f"Error: Function {func_name} not found."
 
@@ -2359,6 +2377,8 @@ class ConversableAgent(LLMAgent):
                 warnings.warn(f"The function {name} to remove doesn't exist", name)
         self._function_map.update(function_map)
         self._function_map = {k: v for k, v in self._function_map.items() if v is not None}
+        for key, value in self._function_map.items():
+            print(f"{key}: {value}")
 
     def update_function_signature(self, func_sig: Union[str, Dict], is_remove: None):
         """update a function_signature in the LLM configuration for function_call.
@@ -2623,7 +2643,6 @@ class ConversableAgent(LLMAgent):
                 func._name = name
             elif not hasattr(func, "_name"):
                 func._name = func.__name__
-
             self.register_function({func._name: self._wrap_function(func)})
 
             return func
