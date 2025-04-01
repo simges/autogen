@@ -1,0 +1,21 @@
+
+-- Table: business --
+bid	business_id	name	full_address	city	latitude	longitude	review_count	is_open	rating	state
+
+-- Table: category --
+id	business_id	category_name
+
+-- Table: user --
+uid	user_id	name
+
+-- Table: checkin --
+cid	business_id	count	day
+
+-- Table: neighbourhood --
+id	business_id	neighbourhood_name
+
+-- Table: review --
+rid	business_id	user_id	rating	text	year	month
+
+-- Table: tip --
+tip_id	business_id	text	user_id	likes	year	month

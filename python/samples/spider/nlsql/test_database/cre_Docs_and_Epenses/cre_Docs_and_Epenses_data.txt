@@ -1,0 +1,76 @@
+
+-- Table: Ref_Document_Types --
+Document_Type_Code	Document_Type_Name	Document_Type_Description
+BK	Book	excellent
+CV	CV	excellent
+PT	Presentation	very good
+PP	Paper	good
+FM	Film	fun
+
+-- Table: Ref_Budget_Codes --
+Budget_Type_Code	Budget_Type_Description
+GV	Government
+ORG	Organisation
+SF	Self founded
+
+-- Table: Projects --
+Project_ID	Project_Details
+30	Society Research project
+35	Internet of Things project
+105	Graph Database project
+134	Human Resource project
+195	Population Research project
+
+-- Table: Documents --
+Document_ID	Document_Type_Code	Project_ID	Document_Date	Document_Name	Document_Description	Other_Details
+29	CV	30	2004-08-28 06:59:19	Review on UK files	NULL	NULL
+42	BK	105	2012-12-27 19:09:18	Review on Canadian files	NULL	NULL
+57	CV	195	1980-10-22 14:17:11	Review on French files	NULL	NULL
+121	BK	105	1981-11-29 10:23:01	Review on USA files	NULL	NULL
+181	PP	105	1970-06-17 14:03:21	Chapter on private files	NULL	NULL
+192	PP	134	2013-01-26 15:15:25	Book on USA files	NULL	NULL
+226	BK	30	1991-07-08 08:49:59	Review on UK files	NULL	NULL
+227	BK	30	1970-03-06 07:34:49	Deontae files	NULL	NULL
+240	BK	105	1971-06-09 19:03:41	Winona Book	NULL	NULL
+300	FM	35	2007-09-26 02:39:11	Trenton Presentation	NULL	NULL
+309	BK	35	1978-10-15 10:33:17	Noel CV	NULL	NULL
+318	PP	134	1970-01-30 10:53:35	King Book	NULL	NULL
+367	CV	134	1983-08-24 17:10:26	Jevon Paper	NULL	NULL
+371	PP	105	1976-05-06 12:56:12	Katheryn statement	NULL	NULL
+383	PP	35	2005-10-28 03:17:16	Review on UK files	NULL	NULL
+
+-- Table: Statements --
+Statement_ID	Statement_Details
+57	Open Project
+192	Private Project
+
+-- Table: Documents_with_Expenses --
+Document_ID	Budget_Type_Code	Document_Details
+57	GV	government
+192	GV	government
+226	GV	government
+227	GV	government
+240	GV	government
+300	GV	government
+309	SF	safety
+367	SF	safety
+371	ORG	organization
+383	ORG	organization
+
+-- Table: Accounts --
+Account_ID	Statement_ID	Account_Details
+7	57	495.063
+61	57	930.14
+98	57	6035.84
+136	57	199.52
+164	192	12223.93
+209	57	11130.23
+211	192	1230.454
+240	192	6352.31
+262	57	147.96
+280	57	187.14
+321	192	745.817
+346	192	127.9
+414	57	25.41
+427	57	1168.32
+451	192	658.26

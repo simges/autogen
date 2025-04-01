@@ -1,0 +1,66 @@
+
+-- Table: city_channel --
+ID	City	Station_name	Owned_Since	Affiliation
+1	Phoenix	KNXV-TV	1985.0	ABC
+2	Bakersfield, California	KERO-TV	2011.0	ABC
+3	Bakersfield, California	KZKC-LP	2011.0	Azteca América
+4	San Diego	KGTV	2011.0	ABC
+5	San Diego	KZSD-LP	2011.0	Azteca América
+6	Colorado Springs, Colorado	KZKS-LP	2011.0	Azteca América
+7	Denver	KMGH-TV	2011.0	ABC
+8	Denver	KZCO-LP	2011.0	Azteca América
+9	Fort Collins, Colorado	KZFC-LP	2011.0	Azteca América
+10	Tampa – St. Petersburg	WFTS-TV	1986.0	ABC
+11	West Palm Beach	WPTV	1961.0	NBC
+12	Indianapolis	WRTV	2011.0	ABC
+13	Baltimore	WMAR-TV	1991.0	ABC
+14	Detroit	WXYZ-TV	1986.0	ABC
+
+-- Table: radio --
+Radio_ID	Transmitter	Radio_MHz	2FM_MHz	RnaG_MHz	Lyric_FM_MHz	ERP_kW
+1	Cairn Hill	89.8	N/A	N/A	N/A	16
+2	Clermont Carn	87.8	97.0	102.7	95.2	40
+3	Kippure	89.1	91.3	93.5	98.7	40
+4	Maghera	88.8	91.0	93.2	98.4	160
+5	Mount Leinster	89.6	91.8	94.0	99.2	100
+6	Mullaghanish	90.0	92.2	94.4	99.6	160
+7	Three Rock	88.5	90.7	92.9	96.7	12.5
+
+-- Table: tv_show --
+tv_show_ID	tv_show_name	Sub_tittle	Next_show_name	Original_Airdate
+1	Peace and Quiet	Wanted: Wade	Garfield Goes an Hawaii	September17,1988
+2	Box O' Fun	Unidentified Flying Orson	School Daze	September24,1988
+3	Nighty Nightmare	Banana Nose	Ode to Odie	October1,1988
+4	Fraidy Cat	Shell Shocked Sheldon	Nothing to Sneeze At	October8,1988
+5	Garfield's Moving Experience	Wade: You're Afraid	Good Mouse-keeping	October15,1988
+6	Identity Crisis	The Bad Sport	Up a Tree	October22,1988
+7	Weighty Problem	The Worm Turns	Good Cat, Bad Cat	October29,1988
+8	Cabin Fever	Return of Power Pig	Fair Exchange	November5,1988
+9	The Binky Show	Keeping Cool	Don't Move	November12,1988
+10	Magic Mutt	Short Story	Monday Misery	November19,1988
+11	Best of Breed	National Tapioca Pudding Day	All About Odie	November26,1988
+12	Caped Avenger	Shy Fly Guy	Green Thumbs Down	December3,1988
+
+-- Table: city_channel_radio --
+City_channel_ID	Radio_ID	Is_online
+1	1	T
+2	2	T
+3	3	F
+4	4	T
+10	1	F
+6	1	T
+7	5	F
+8	3	T
+4	6	T
+12	2	F
+
+-- Table: city_channel_tv_show --
+City_channel_ID	tv_show_ID	Is_online	Is_free
+12	2	T	F
+13	1	T	F
+14	1	F	F
+11	4	T	T
+1	2	T	F
+2	3	F	F
+5	1	T	T
+7	2	T	T

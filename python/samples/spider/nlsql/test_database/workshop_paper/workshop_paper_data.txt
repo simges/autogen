@@ -1,0 +1,31 @@
+
+-- Table: workshop --
+Workshop_ID	Date	Venue	Name
+1	August 18, 2007	London UK	ABC 2007
+2	August 21, 2007	London UK	Conference 2007
+3	August 25, 2007	New Jersey USA	Workshop 2007
+4	October 8, 2007	New York USA	2007 qualification
+5	January 14, 2008	New York USA	2008 qualification
+6	July 5, 2011	Istanbul Turkey	Anual Workshop 2011
+
+-- Table: submission --
+Submission_ID	Scores	Author	College
+1	72.0	Steve Niehaus	Notre Dame
+2	79.0	Sammy Green	Florida
+3	78.0	Sherman Smith	Miami (OH)
+4	79.0	Steve Raible	Georgia Tech
+5	82.0	Jeff Lloyd	West Texas State
+6	89.0	Rick Engles	Tulsa
+7	92.0	Don Bitterlich	Temple
+8	93.0	Steve Myer	New Mexico
+9	82.0	Randy Johnson	Georgia
+10	83.0	Andy Bolton	Fisk
+
+-- Table: Acceptance --
+Submission_ID	Workshop_ID	Result
+2	5	Accepted
+2	3	Rejected
+3	2	Rejected
+4	6	Rejected
+5	6	Rejected
+1	1	Accepted

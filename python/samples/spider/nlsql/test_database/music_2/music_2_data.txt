@@ -1,0 +1,21 @@
+
+-- Table: Songs --
+SongId	Title
+
+-- Table: Albums --
+AId	Title	Year	Label	Type
+
+-- Table: Band --
+Id	Firstname	Lastname
+
+-- Table: Instruments --
+SongId	BandmateId	Instrument
+
+-- Table: Performance --
+SongId	Bandmate	StagePosition
+
+-- Table: Tracklists --
+AlbumId	Position	SongId
+
+-- Table: Vocals --
+SongId	Bandmate	Type

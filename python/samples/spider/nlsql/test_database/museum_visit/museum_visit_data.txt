@@ -1,0 +1,29 @@
+
+-- Table: museum --
+Museum_ID	Name	Num_of_Staff	Open_Year
+1	Plaza Museum	62	2000
+2	Capital Plaza Museum	25	2012
+3	Jefferson Development Museum	18	2010
+4	Willow Grande Museum	17	2011
+5	RiverPark Museum	16	2008
+6	Place Tower Museum	16	2008
+7	Central City District Residential Museum	15	2010
+8	ZirMed Gateway Museum	12	2009
+
+-- Table: visitor --
+ID	Name	Level_of_membership	Age
+1	Gonzalo Higuaín 	8	35
+2	Guti Midfielder	5	28
+3	Arjen Robben	1	27
+4	Raúl Brown	2	56
+5	Fernando Gago	6	36
+6	Rafael van der Vaart	1	25
+
+-- Table: visit --
+Museum_ID	visitor_ID	Num_of_Ticket	Total_spent
+1	5	20	320.14
+2	5	4	89.98
+4	3	10	320.44
+2	3	24	209.98
+4	6	3	20.44
+8	6	2	19.98

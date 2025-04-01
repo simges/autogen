@@ -1,0 +1,118 @@
+
+-- Table: Investors --
+investor_id	Investor_details
+1	z
+2	z
+3	d
+4	d
+5	b
+6	k
+7	l
+8	t
+9	y
+10	r
+11	q
+12	c
+13	o
+14	w
+15	i
+16	y
+17	k
+18	w
+19	l
+20	j
+
+-- Table: Lots --
+lot_id	investor_id	lot_details
+1	13	r
+2	16	z
+3	10	s
+4	19	s
+5	6	q
+6	20	d
+7	7	m
+8	7	h
+9	20	z
+10	9	x
+11	1	d
+12	19	m
+13	7	z
+14	6	d
+15	1	h
+
+-- Table: Ref_Transaction_Types --
+transaction_type_code	transaction_type_description
+SALE	Sale
+PUR	Purchase
+
+-- Table: Transactions --
+transaction_id	investor_id	transaction_type_code	date_of_transaction	amount_of_transaction	share_count	other_details
+1	6	SALE	1988-09-16 19:02:51	302507.6996	8718572	NULL
+2	18	PUR	1982-06-06 17:19:00	27.257	9	NULL
+3	2	SALE	1979-04-27 06:03:59	48777.969	8580	NULL
+4	14	PUR	2001-11-28 15:06:25	4.5263	8040	NULL
+5	8	PUR	1977-08-17 13:13:30	0	930	NULL
+6	19	PUR	1985-10-08 13:13:39	207484122.2796	2751	NULL
+7	7	PUR	1990-12-02 09:03:38	822.803	1522	NULL
+8	17	SALE	2004-01-18 20:37:50	78035671.4424	96178	NULL
+9	20	PUR	1977-08-13 02:18:47	82057.207		NULL
+10	2	SALE	1981-01-28 08:07:03	29.3534	1654756	NULL
+11	3	SALE	2000-04-03 20:55:43	0	674529892	NULL
+12	18	SALE	1983-11-01 17:57:27	1	587	NULL
+13	3	SALE	2002-04-07 20:28:37	183.2		NULL
+14	3	PUR	2002-09-13 03:04:56	0	630021	NULL
+15	19	PUR	1997-12-30 05:05:40	8.9	93191	NULL
+
+-- Table: Sales --
+sales_transaction_id	sales_details
+1	x
+2	o
+3	a
+4	f
+5	y
+6	x
+7	p
+8	e
+9	p
+10	s
+11	s
+12	t
+13	p
+14	n
+15	e
+
+-- Table: Purchases --
+purchase_transaction_id	purchase_details
+1	c
+2	y
+3	i
+4	x
+5	y
+6	a
+7	r
+8	a
+9	r
+10	l
+11	z
+12	h
+13	t
+14	o
+15	x
+
+-- Table: Transactions_Lots --
+transaction_id	lot_id
+3	11
+3	8
+2	11
+3	14
+12	10
+15	10
+10	10
+1	1
+1	14
+3	4
+14	9
+7	1
+12	15
+6	3
+2	1

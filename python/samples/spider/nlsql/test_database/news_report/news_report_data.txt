@@ -1,0 +1,32 @@
+
+-- Table: event --
+Event_ID	Date	Venue	Name	Event_Attendance
+1	13 October 2008	Marathon	Olympia Games Openning	6650
+2	11 October 2007	Victoria	Government Hearing	369
+3	7 October 2010	Motagua	Public Debating	1675
+4	20 June 2018	Platense	Global Awarding	2356
+5	9 April 2014	Hispano	Special Exhibition	225
+
+-- Table: journalist --
+journalist_ID	Name	Nationality	Age	Years_working
+1	Herbert Swindells	England	37	10
+2	Fred Keenor	Wales	27	5
+3	George Gilchrist	England	28	6
+4	Jackie Waring	England	43	21
+5	Fred Chandler	England	34	6
+6	Ray Ferris	Northern Ireland	29	3
+7	John Meaney	England	28	7
+8	Tony Waddington	England	43	12
+9	Jack Meaney	England	37	8
+10	Frank Mitcheson	England	33	9
+11	Tom Briggs	England	25	1
+
+-- Table: news_report --
+journalist_ID	Event_ID	Work_Type
+1	3	Screening
+11	5	Screening
+6	1	Screening
+4	2	Music
+7	5	Music
+4	1	Host
+8	4	Host

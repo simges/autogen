@@ -1,0 +1,22 @@
+
+-- Table: perpetrator --
+Perpetrator_ID	People_ID	Date	Year	Location	Country	Killed	Injured
+1	1	04.26 April 26/27	1982.0	Uiryeong	South Korea	56	37
+2	3	11.18 Nov. 18	1995.0	Zhaodong	China	32	16
+3	4	05.21 May 21	1938.0	Kaio	Japan	30	3
+4	6	09.20 Sep. 20	1994.0	Beijing	China	23	80
+5	8	04.00 April	1950.0	Nainital	India	22	0
+
+-- Table: people --
+People_ID	Name	Height	Weight	Home Town
+1	Ron Baxter	6.4	205.0	Los Angeles, CA
+2	Brent Boyd	6.3	185.0	Baton Rouge, LA
+3	Tyrone Brayan	6.7	220.0	Placentia, CA
+4	Rob Cunningham	6.8	215.0	Westport, CT
+5	John Danks	6.6	190.0	Beaver Dam, KY
+6	Ovie Dotson	6.5	200.0	San Antonio, TX
+7	Gary Goodner	6.7	220.0	Denton, TX
+8	Henry Johnson	6.6	190.0	Los Angeles, CA
+9	Jim Krivacs	6.1	160.0	Indianapolis, IN
+10	John Moore	6.1	170.0	Altoona, PA
+11	Mike Murphy	6.8	215.0	Austin, TX

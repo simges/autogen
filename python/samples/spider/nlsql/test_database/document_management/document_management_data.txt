@@ -1,0 +1,132 @@
+
+-- Table: Roles --
+role_code	role_description
+DBA	Database Administrator
+PROJ-MGR	Project Manager
+
+-- Table: Users --
+user_id	role_code	user_name	user_login	password
+1	PROJ-MGR	dickens.elta	0	e72b5a2d50b39a8760764a5f7a9d68ca2f076877
+2	DBA	tremblay.raheem	1	9bc25a040d5647ced5ec32e1a455e90fafc10bcb
+3	DBA	lynn.haley	0	90db8f51449e6c39e2a01f0b649d5a92fe76bbbb
+4	PROJ-MGR	ycremin	0	f6977378f409f5d2d230016a6678a582e14f43b0
+5	PROJ-MGR	larson.vesta	1	da383455a05a824606c54e99f671c4d6a2ddae26
+6	DBA	amelie53	0	6aa66440864ff8143fe7dee5940a6af3460bad07
+7	DBA	jacklyn.schmitt	1	3f6affa583bfdf7fac6faeb2ca418431909d4b39
+8	PROJ-MGR	joanne.deckow	0	20241478f890508ac47870cfba472e1db04a71ca
+9	PROJ-MGR	dickinson.lenora	0	a0fe5434a5f4c218e37b0082f2408b357feb0fa6
+10	DBA	heller.harley	1	11af7569a5c1e8b455add5755e18131be2ac8636
+11	DBA	roger.o'conner	0	3d478d7056d6417966f6b1676f6ec81b3094f44f
+12	DBA	gussie00	1	75f7b5ed8e70e86467155e003ccda6fce1011c29
+13	PROJ-MGR	johanna.fisher	1	1fb26eea854962d41512827bf90a5b7ce4b359d8
+14	DBA	faye30	0	27cca8f94136f0e8971b5ca555a21ff756871b27
+15	PROJ-MGR	glenna.simonis	1	95f489fc0921bbb3e7d661a550ae208b88d9b11a
+
+-- Table: Document_Structures --
+document_structure_code	parent_document_structure_code	document_structure_description
+1	1	Header
+6	1	Main section
+8	1	Bib
+5	6	Image section
+9	8	Author section
+
+-- Table: Functional_Areas --
+functional_area_code	parent_functional_area_code	functional_area_description
+8	8	Signature
+1	8	Acknowledgement
+9	8	Keep blank
+
+-- Table: Images --
+image_id	image_alt_text	image_name	image_url
+1	Lea	top1	http://www.rempelnader.com/1.jpg
+2	Arden	top2	http://connellykertzmann.org/1.jpg
+3	Mohamed	top3	http://www.bernierconnelly.com/1.jpg
+4	Chaya	top4	http://abernathyboehm.com/1.jpg
+5	Percival	chapter1	http://gaylord.info/1.jpg
+6	Lincoln	chapter2	http://www.hellerreinger.com/1.jpg
+7	Camylle	chapter3	http://faycummerata.net/1.jpg
+8	Ashtyn	chapter4	http://haleychamplin.net/1.jpg
+9	Filomena	chapter5	http://www.fritsch.net/1.jpg
+10	Jeanette	data1	http://sauer.com/1.jpg
+11	Name	data2	http://www.heller.com/1.jpg
+12	Marianna	data3	http://www.hermann.com/1.jpg
+13	Stephen	data4	http://rowelakin.com/1.jpg
+14	Miller	data5	http://andersonluettgen.net/1.jpg
+15	Trycia	data6	http://www.beahan.biz/1.jpg
+
+-- Table: Documents --
+document_code	document_structure_code	document_type_code	access_count	document_name
+217	8	Book	1864	Learning English
+621	1	Paper	8208	Research about Art history
+958	8	Book	3769	Learning Database
+961	5	Advertisement	6661	Summer Sails
+989	9	Book	2910	Learning Japanese
+930	9	CV	6345	David CV
+928	8	Book	2045	How to cook pasta
+510	6	Paper	3479	Humanity: a fact
+706	9	Advertisement	8623	Winter Sails
+465	9	CV	5924	John CV
+713	8	CV	2294	Joe CV
+566	5	Advertisement	3289	Spring Sails
+349	9	Book	1219	Life about Claude Monet
+675	1	Advertisement	7509	Fall Sails
+714	6	Paper	9948	Relationships between History and Arts
+
+-- Table: Document_Functional_Areas --
+document_code	functional_area_code
+675	9
+930	1
+217	1
+465	1
+958	1
+958	9
+217	9
+961	9
+928	9
+958	9
+349	1
+961	8
+989	1
+706	8
+713	8
+
+-- Table: Document_Sections --
+section_id	document_code	section_sequence	section_code	section_title
+12	714	6072	70	after
+15	217	4510	14	after
+19	675	7236	90	after
+21	675	9847	72	before
+23	465	8548	49	after
+27	566	6016	18	before
+38	930	6521	58	after
+40	465	4964	93	after
+54	961	4794	34	before
+57	989	6349	22	after
+62	621	5552	16	after
+86	706	2170	60	after
+89	566	2354	34	before
+93	713	4433	91	before
+95	621	8805	38	before
+
+-- Table: Document_Sections_Images --
+section_id	image_id
+93	6
+86	2
+27	3
+12	12
+19	12
+38	12
+89	8
+23	8
+40	5
+19	2
+62	14
+21	2
+86	4
+15	14
+54	12
+38	7
+15	13
+27	10
+40	6
+19	6

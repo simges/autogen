@@ -1,0 +1,120 @@
+
+-- Table: Ref_Document_Types --
+document_type_code	document_type_description
+CD	b
+Paper	u
+Hard Drive	f
+
+-- Table: Roles --
+role_code	role_description
+ED	Editor
+PT	Photo
+MG	Manager
+PR	Proof Manager
+
+-- Table: Addresses --
+address_id	address_details
+0	IT
+1	MX
+2	DE
+3	ES
+4	ES
+5	IE
+6	US
+7	PT
+8	IE
+9	MX
+
+-- Table: Ref_Document_Status --
+document_status_code	document_status_description
+working	currently working on
+done	mailed
+overdue	mailed late
+
+-- Table: Ref_Shipping_Agents --
+shipping_agent_code	shipping_agent_name	shipping_agent_description
+UP	UPS	g
+US	USPS	q
+AL	Airline	w
+FE	Fedex	k
+SH	Ship	t
+
+-- Table: Documents --
+document_id	document_status_code	document_type_code	shipping_agent_code	receipt_date	receipt_number	other_details
+1	working	CD	UP	2008-04-21 20:42:25	19	z
+2	done	Paper	US	1974-05-08 00:00:46	34	h
+3	done	Paper	UP	2014-12-25 17:22:44	93	h
+4	done	Paper	US	1973-11-05 21:48:53	80	q
+7	working	CD	SH	1982-09-27 14:52:15	61	w
+10	overdue	Paper	UP	1976-09-15 19:24:17	8	m
+12	overdue	Hard Drive	US	1996-05-31 06:51:58	69	n
+13	working	CD	UP	2015-04-03 09:36:19	79	y
+14	working	CD	FE	2017-07-02 17:39:09	117	u
+15	overdue	CD	UP	1986-12-14 14:18:59	37	r
+17	done	Paper	FE	1983-09-26 09:32:56	55	p
+20	working	Paper	UP	1996-07-27 03:30:40	189	x
+23	working	Hard Drive	FE	1999-04-17 14:19:32	124	b
+24	working	Hard Drive	FE	2005-09-30 00:10:02	114	j
+25	overdue	Hard Drive	AL	1985-11-05 17:59:34	83	u
+
+-- Table: Employees --
+employee_id	role_code	employee_name	other_details
+1	ED	Koby	h
+2	ED	Kenyon	f
+3	PR	Haley	b
+5	PT	Clemens	b
+7	PT	Jordyn	v
+8	MG	Erling	u
+
+-- Table: Document_Drafts --
+document_id	draft_number	draft_details
+1	0	e
+1	2	k
+2	1	v
+2	8	v
+4	9	r
+7	10	m
+10	20	k
+12	11	b
+12	12	r
+13	4	w
+13	16	p
+14	14	x
+17	19	a
+20	17	l
+23	9	r
+
+-- Table: Draft_Copies --
+document_id	draft_number	copy_number
+2	8	5
+4	9	6
+23	9	15
+10	20	10
+2	1	4
+1	2	5
+20	17	15
+12	12	10
+
+-- Table: Circulation_History --
+document_id	draft_number	copy_number	employee_id
+20	17	15	8
+1	2	5	1
+2	1	4	2
+10	20	10	2
+
+-- Table: Documents_Mailed --
+document_id	mailed_to_address_id	mailing_date
+2	8	1977-04-01 17:03:50
+4	3	1992-11-07 15:03:41
+4	9	1973-02-21 10:17:01
+7	5	1979-09-21 10:30:52
+10	3	1993-05-24 22:13:48
+12	0	1999-05-22 23:21:07
+12	7	2007-01-01 22:32:11
+12	8	2007-03-20 05:22:01
+13	4	1991-05-27 14:17:37
+14	5	1986-05-16 06:25:33
+20	2	2010-11-04 04:00:16
+20	7	1982-01-14 05:50:54
+23	8	1971-11-03 12:32:14
+24	0	2013-01-27 03:29:31

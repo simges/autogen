@@ -1,0 +1,49 @@
+
+-- Table: channel --
+Channel_ID	Name	Analogue_terrestrial_channel	Digital_terrestrial_channel	Internet
+1	BBC One	1	HD	bbc.co.uk
+2	ITV	3	HD	ITV - itv.com
+3	BBC Two	2	2	bbc.co.uk
+4	Channel 4	4	8	channel4.com
+5	Channel 5	5	44	unavailable
+6	ITV3	unavailable	10	itv.com
+7	ITV2	unavailable	6	itv.com
+8	E4	unavailable	28	e4.com
+9	Sky Sports 1	unavailable	unavailable	skysports.com
+10	Sky1	unavailable	unavailable	sky.com
+11	CBeebies	unavailable	71	bbc.co.uk
+12	ITV4	unavailable	24	itv.com
+13	BBC Three	unavailable	7	bbc.co.uk
+14	Dave	unavailable	12	dave.uktv.co.uk
+
+-- Table: director --
+Director_ID	Name	Age
+1	DeSean Jackson	60
+2	Hank Baskett	90
+3	Greg Lewis	52
+4	Brent Celek	44
+5	Correll Buckhalter	59
+6	Reggie Brown	40
+7	Brian Westbrook	47
+8	Jason Avant	31
+9	Kevin Curtis	32
+10	L.J. Smith	43
+
+-- Table: program --
+Program_ID	Start_Year	Title	Director_ID	Channel_ID
+1	2002.0	The Angry Brigade	1	14
+2	2006.0	Dracula	2	10
+3	2006.0	Another Country	3	3
+4	2007.0	Caesar III: An Empire Without End	5	14
+5	2008.0	Othello	3	7
+6	2008.0	The Leopard	6	7
+7	2008.0	Cyrano de Bergerac	10	14
+8	2009.0	Carnival	9	10
+
+-- Table: director_admin --
+Director_ID	Channel_ID	Is_first_director
+1	14	T
+5	14	F
+3	14	F
+4	7	T
+6	7	F

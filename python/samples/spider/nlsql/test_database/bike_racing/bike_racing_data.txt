@@ -1,0 +1,37 @@
+
+-- Table: bike --
+id	product_name	weight	price	material
+1	BIANCHI SPECIALISSIMA	780	9999.0	Carbon CC
+2	CANNONDALE SUPERSIX EVO HI-MOD DURA ACE	850	5330.0	carbon fiber
+3	CANYON AEROAD CF SLX 8.0 DI2	880	3050.0	Toray T700 and T800 carbon fiber
+4	GIANT TCR ADVANCED SL 0	750	9000.0	Carbon CC
+5	Ibis	800	3599.0	Carbon CC
+6	Ibis ||	760	5000.0	carbon fiber
+
+-- Table: cyclist --
+id	heat	name	nation	result
+1	4	Bradley Wiggins	Great Britain	4:16.571
+2	3	Hayden Roulston	New Zealand	4:19.232
+3	1	Steven Burke	Great Britain	4:21.558
+4	2	Alexei Markov	Russia	4:22.308
+5	1	Volodymyr Dyudya	Ukraine	4:22.471
+6	2	Antonio Tauler	Spain	4:24.974
+7	4	Alexander Serov	Russia	4:25.391
+8	3	Taylor Phinney	United States	4:26.644
+
+-- Table: cyclists_own_bikes --
+cyclist_id	bike_id	purchase_year
+1	2	2011
+1	3	2015
+2	3	2017
+2	5	2013
+2	4	2018
+3	4	2017
+4	4	2017
+5	5	2016
+6	5	2016
+7	5	2010
+7	4	2011
+7	2	2012
+7	1	2013
+7	3	2014

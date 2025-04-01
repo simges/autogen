@@ -1,0 +1,53 @@
+
+-- Table: player --
+Player_ID	Sponsor_name	Player_name	Gender	Residence	Occupation	Votes	Rank
+1	Brandon—Souris	Jean Luc Bouché	M	Brandon	Locomotive Engineer	6055	2nd
+2	Charleswood—St. James—Assiniboia	Fiona Shiells	F	Winnipeg	Ministerial Assistant	7190	3rd
+3	Churchill	Niki Ashton	F	Thompson	Researcher	8734	1st
+4	Dauphin—Swan River—Marquette	Ron Strynadka	M	Birtle	Retired	4914	2nd
+5	Elmwood—Transcona	Jim Maloway	M	Winnipeg	Small Businessman	14355	1st
+6	Kildonan—St. Paul	Ross Eadie	M	Winnipeg	Self Employed / Consultant	12093	2nd
+7	Portage—Lisgar	Mohamed Alli	M	Winnipeg	Distribution Centre Associate	2353	4th
+8	Provencher	Ross C. Martin	M	Oakbank	Design Coordinator	4947	2nd
+9	Saint Boniface	Matt Schaubroeck	M	Winnipeg	Student	5502	3rd
+10	Selkirk—Interlake	Patricia Cordner	F	Selkirk	Retired	9506	2nd
+11	Winnipeg Centre	Pat Martin	M	Winnipeg	Parliamentarian	12285	1st
+12	Winnipeg North	Judy Wasylycia-Leis	F	Winnipeg	Parliamentarian	14097	1st
+13	Winnipeg South	Sean Robert	M	Winnipeg	Product Consultant - MLCC	4673	3rd
+14	Winnipeg South Centre	Rachel Heinrichs	F	Winnipeg	Student	5490	3rd
+
+-- Table: club --
+Club_ID	Club_name	Region	Start_year
+1	AIK	USA	2009
+2	BK Häcken	UK	1998
+3	Djurgårdens IF	USA	2005
+4	Gefle IF	Korea	2001
+5	Halmstads BK	Russia	2000
+6	Helsingborgs IF	France	2011
+
+-- Table: coach --
+Coach_ID	Coach_name	Gender	Club_ID	Rank
+1	Jameson Tomas	M	1	1
+2	Joe Fabbri	F	1	2
+3	Robert Chen	M	3	3
+4	James Wong	M	3	4
+5	Smith Brown	M	1	5
+
+-- Table: player_coach --
+Player_ID	Coach_ID	Starting_year
+1	1	2010
+2	1	2011
+3	1	2012
+4	2	2013
+6	3	2012
+10	3	2011
+14	5	2010
+
+-- Table: match_result --
+Rank	Club_ID	Gold	Big_Silver	Small_Silver	Bronze	Points
+1	1	20	14	9	8	168
+2	2	13	11	16	9	139
+3	3	12	9	4	7	102
+4	4	5	12	10	8	89
+5	5	7	7	9	10	84
+6	6	6	6	6	6	66

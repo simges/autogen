@@ -1,0 +1,3 @@
+
+-- Table: players --
+player_id	first_name	last_name	hand	birth_date	country_code

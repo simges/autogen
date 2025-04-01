@@ -1,0 +1,48 @@
+
+-- Table: actor --
+aid	gender	name	nationality	birth_city	birth_year
+
+-- Table: copyright --
+id	msid	cid
+
+-- Table: cast --
+id	msid	aid	role
+
+-- Table: genre --
+gid	genre
+
+-- Table: classification --
+id	msid	gid
+
+-- Table: company --
+id	name	country_code
+
+-- Table: director --
+did	gender	name	nationality	birth_city	birth_year
+
+-- Table: producer --
+pid	gender	name	nationality	birth_city	birth_year
+
+-- Table: directed_by --
+id	msid	did
+
+-- Table: keyword --
+id	keyword
+
+-- Table: made_by --
+id	msid	pid
+
+-- Table: movie --
+mid	title	release_year	title_aka	budget
+
+-- Table: tags --
+id	msid	kid
+
+-- Table: tv_series --
+sid	title	release_year	num_of_seasons	num_of_episodes	title_aka	budget
+
+-- Table: writer --
+wid	gender	name	nationality	num_of_episodes	birth_city	birth_year
+
+-- Table: written_by --
+id	msid	wid

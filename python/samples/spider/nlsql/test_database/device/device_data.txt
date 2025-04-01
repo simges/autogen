@@ -1,0 +1,35 @@
+
+-- Table: device --
+Device_ID	Device	Carrier	Package_Version	Applications	Software_Platform
+1	BlackBerry Storm 9530	MTS Mobility	5.0.0.808	5.0.0.419	Android
+2	Apple	Verizon Wireless	5.0.0.328	5.0.0.328	iOS
+3	Huawei	Telus Mobility	5.0.0.419	5.0.0.419	Android
+4	Xiaomi	Bell Mobility	5.0.0.419	5.0.0.419	Android
+5	Samsung	Iusacell	4.7.0.208	4.7.0.151	Android
+6	Galaxy	Vodafone AU	5.0.0.742	5.0.0.451	Android
+
+-- Table: shop --
+Shop_ID	Shop_Name	Location	Open_Date	Open_Year
+1	Dinas Device	Dinas	1 January	2014
+2	Best Buy	Cymmer	15 July	2006
+3	Ferndale	Blaenllechau	8 November	2009
+4	Apple	Blaenllechau	10 June	2009
+5	Pentre store	Pentre	24 February	2011
+6	Tynewydd repair	Porth	11 April	2007
+7	Dinas store	Dinas	13 January	2009
+8	Naval repair	Penygraig	10 December	2010
+9	Gelli repair	Gelli	21 August	2013
+10	Naval's shop	Penygraig	27 January	2014
+11	ATnT	Maerdy	23–24 December	2015
+12	National Cellphone	Wattstown	18 February	2017
+
+-- Table: stock --
+Shop_ID	Device_ID	Quantity
+1	6	100
+2	6	110
+3	6	134
+4	6	56
+1	4	200
+11	6	112
+3	4	124
+9	4	51

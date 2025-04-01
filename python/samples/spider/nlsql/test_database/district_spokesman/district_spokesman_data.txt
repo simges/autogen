@@ -1,0 +1,32 @@
+
+-- Table: district --
+District_ID	Name	Area_km	Population	Density_km	Government_website
+1	Pozo Almonte	13765.8	10830.0	0.8	linke.gov
+2	Pica	8934.3	6178.0	0.7	linkd.gov
+3	Huara	10474.6	2599.0	0.2	linka.gov
+4	Colchane	4015.6	1649.0	0.4	linkg.gov
+5	Camiña	2200.2	1275.0	0.6	abc.com
+
+-- Table: spokesman --
+Spokesman_ID	Name	Age	Speach_title	Rank_position	Points
+1	Rocco Granata	45	Life and Freedom	1.0	498.0
+3	Elvis Presley	29	Now or Never	1.0	438.0
+4	Lolita	32	Happiness	1.0	402.0
+5	Connie Francis	47	Everybody's Somebody's Fool	1.0	365.0
+6	Don Gibson	46	I Can't Stop Loving my People	2.0	358.0
+7	Jack Scott	38	 What in the World's Come Over You	2.0	354.0
+8	Billy Vaughn Orchestra	48	Be with the People	1.0	350.0
+9	Nora Brockstedt	36	People	1.0	304.0
+10	Inger Jacobsen	38	Public Health	1.0	287.0
+11	Bob Luman	43	Let's Think About Living	3.0	240.0
+12	Elvis Presley	39	Public Health	2.0	227.0
+13	Roy Orbison	34	Freedom	4.0	223.0
+
+-- Table: spokesman_district --
+Spokesman_ID	District_ID	Start_year
+1	1	2003
+10	5	2004
+3	1	2005
+4	2	2006
+5	4	2007
+6	1	2012

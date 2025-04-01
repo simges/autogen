@@ -1,0 +1,14 @@
+
+-- Table: Person --
+name	age	city	gender	job
+Alice	25	new york city	female	student
+Bob	35	salt lake city	male	engineer
+Zach	45	austin	male	doctor
+Dan	26	chicago	female	student
+
+-- Table: PersonFriend --
+name	friend	year
+Alice	Bob	10
+Zach	Dan	12
+Bob	Zach	5
+Zach	Alice	6
