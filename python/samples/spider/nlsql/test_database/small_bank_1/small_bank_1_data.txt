@@ -1,0 +1,29 @@
+
+-- Table: ACCOUNTS --
+custid	name
+1	Brown
+2	Wang
+3	O'mahony
+4	Weeks
+5	Granger
+6	Porter
+7	Wesley
+
+-- Table: SAVINGS --
+custid	balance
+1	200000.0
+2	999999999.0
+3	230000.0
+4	60.0
+5	80000.0
+6	240.0
+
+-- Table: CHECKING --
+custid	balance
+1	10000.0
+2	2000.0
+3	3000.0
+4	7000.0
+5	10000.0
+6	77.0
+7	7.0

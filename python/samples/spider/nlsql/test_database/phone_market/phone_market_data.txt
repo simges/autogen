@@ -1,0 +1,26 @@
+
+-- Table: phone --
+Name	Phone_ID	Memory_in_G	Carrier	Price
+IPhone 5s	1	32	Sprint	320.0
+IPhone 6	5	128	Sprint	480.0
+IPhone 6s	2	128	TMobile	699.0
+IPhone 7	4	16	TMobile	899.0
+IPhone X	3	64	TMobile	1000.0
+
+-- Table: market --
+Market_ID	District	Num_of_employees	Num_of_shops	Ranking
+1	Alberta	1966	40.0	1
+2	British Columbia	1965	49.0	21
+3	New Brunswick	1978	10.0	4
+4	Nova Scotia	1968	32.0	5
+5	Ontario	1958	54.0	3
+6	Quebec	1958	54.0	8
+
+-- Table: phone_market --
+Market_ID	Phone_ID	Num_of_stock
+1	1	2232
+2	2	4324
+1	4	874
+5	1	682
+2	3	908
+6	3	1632

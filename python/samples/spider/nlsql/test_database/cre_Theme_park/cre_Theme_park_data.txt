@@ -1,0 +1,220 @@
+
+-- Table: Ref_Hotel_Star_Ratings --
+star_rating_code	star_rating_description
+1	star
+2	star
+3	star
+4	star
+5	star
+
+-- Table: Locations --
+Location_ID	Location_Name	Address	Other_Details
+333	Astro Orbiter	660 Shea Crescent	NULL
+368	African Animals	254 Ottilie Junction	NULL
+417	American Adventure	53815 Sawayn Tunnel Apt. 297	NULL
+579	The Barnstormer	3374 Sarina Manor	NULL
+603	African Adventure	88271 Barrows Union Suite 203	NULL
+650	UK Gallery	4411 Sabrina Radial Suite 582	NULL
+655	The Boneyard	0692 Georgiana Pass	NULL
+661	Shark World	2485 Mueller Squares Suite 537	NULL
+740	Space Spin	5536 Betsy Street Apt. 646	NULL
+759	Butterflies	959 Feest Glen Suite 523	NULL
+858	Soak Station	4908 Reinger Vista	NULL
+861	Castle	14034 Kohler Drive	NULL
+867	Coral Reefs	4510 Schuster Stream Apt. 613	NULL
+868	Film Festival	770 Edd Lane Apt. 098	NULL
+885	Fossil Fun Games	101 Paucek Crescent	NULL
+
+-- Table: Ref_Attraction_Types --
+Attraction_Type_Code	Attraction_Type_Description
+2	park
+3	garden
+5	gallery
+6	adventure
+9	museum
+
+-- Table: Visitors --
+Tourist_ID	Tourist_Details
+164	Toney
+189	Graciela
+204	Vincent
+211	Vivian
+241	Nettie
+295	Laurence
+359	Newell
+377	Marisol
+399	Jarrell
+439	Edna
+500	Maud
+513	Alison
+541	Rosalind
+545	Tevin
+578	Aleen
+610	Marcelle
+652	Lizzie
+779	Wayne
+841	Teresa
+888	Elnora
+
+-- Table: Features --
+Feature_ID	Feature_Details
+523	cafe
+528	park
+543	garden
+681	shopping
+955	parking
+
+-- Table: Hotels --
+hotel_id	star_rating_code	pets_allowed_yn	price_range	other_hotel_details
+123	5	1	2914989.571	NULL
+144	4			NULL
+172	5		17012.682586009	NULL
+222	5	1		NULL
+239	3	1		NULL
+264	1	1	48525.4530675	NULL
+314	5	1	766712918.96763	NULL
+331	1	1		NULL
+350	1			NULL
+373	5	1	250548014.90329	NULL
+376	2			NULL
+379	4	1	38014975.47848	NULL
+420	5	1	9393.86291219	NULL
+421	3		5526556.6412	NULL
+426	5		245.067720121	NULL
+431	2	1	43.729525	NULL
+442	2	1	289775.7331715	NULL
+473	1	1	2374.7971074	NULL
+514	5		1381255.81865	NULL
+555	5	1	5390.432113	NULL
+
+-- Table: Tourist_Attractions --
+Tourist_Attraction_ID	Attraction_Type_Code	Location_ID	How_to_Get_There	Name	Description	Opening_Hours	Other_Details
+2113	2	579	bus	art museum	NULL	NULL	NULL
+2701	6	417	walk	UK gallery	NULL	NULL	NULL
+5076	2	868	shuttle	flying elephant	NULL	NULL	NULL
+5265	5	603	bus	film festival	NULL	NULL	NULL
+6476	3	417	shuttle	US museum	NULL	NULL	NULL
+6523	9	858	walk	fun games	NULL	NULL	NULL
+6653	9	655	walk	history gallery	NULL	NULL	NULL
+6852	5	858	walk	exploration trial	NULL	NULL	NULL
+7067	5	417	bus	haunted mansion	NULL	NULL	NULL
+8429	9	867	walk	presidents hall	NULL	NULL	NULL
+8449	2	579	bus	impressions de France	NULL	NULL	NULL
+8698	5	661	bus	jungle cruise	NULL	NULL	NULL
+9360	5	868	shuttle	fun shops	NULL	NULL	NULL
+9561	2	759	bus	cafe	NULL	NULL	NULL
+9919	6	579	shuttle	parking	NULL	NULL	NULL
+
+-- Table: Street_Markets --
+Market_ID	Market_Details
+6852	Broadway
+7067	Fish Farm Market
+
+-- Table: Shops --
+Shop_ID	Shop_Details
+8429	soup
+8449	coffee
+8698	Flower
+9360	see food
+
+-- Table: Museums --
+Museum_ID	Museum_Details
+2113	Yale Center for British Art
+2701	The Metropolitan Museum of Art
+5076	MoMA
+
+-- Table: Royal_Family --
+Royal_Family_ID	Royal_Family_Details
+9561	NULL
+9919	NULL
+
+-- Table: Theme_Parks --
+Theme_Park_ID	Theme_Park_Details
+5265	Disney
+6476	Sea World
+6523	Universal Studios
+
+-- Table: Visits --
+Visit_ID	Tourist_Attraction_ID	Tourist_ID	Visit_Date	Visit_Details
+183	6653	377	2004-08-21 03:06:14	
+268	5076	204	2013-08-06 05:35:51	
+273	9360	211	2013-10-27 09:56:08	
+302	6476	377	1990-08-15 14:24:10	
+356	6476	439	1980-11-26 02:08:00	
+381	6523	211	2017-03-19 08:48:19	
+416	6476	841	2008-11-09 01:28:01	
+479	6852	439	1989-08-24 20:26:37	
+563	6852	610	1993-02-01 15:27:20	
+612	9919	204	2007-09-17 10:12:45	
+729	6476	513	1998-05-12 00:50:20	
+776	8698	513	2010-10-04 01:34:12	
+781	6852	779	2018-01-09 20:39:52	
+866	8429	545	1971-12-16 06:41:26	
+909	8698	779	1998-12-10 02:46:43	
+937	6523	541	1996-01-08 13:23:41	
+962	9919	610	2007-09-03 04:30:01	
+968	6852	377	1974-12-31 23:18:24	
+977	8698	500	2001-11-13 10:08:28	
+999	2701	610	1990-11-12 00:54:50	
+
+-- Table: Photos --
+Photo_ID	Tourist_Attraction_ID	Name	Description	Filename	Other_Details
+211	8449	game1	NULL	702	NULL
+280	7067	game2	NULL	762	NULL
+303	5076	game3	NULL	392	NULL
+327	9919	fun1	NULL	820	NULL
+332	5076	fun2	NULL	060	NULL
+428	6523	fun3	NULL	148	NULL
+435	8429	fun4	NULL	453	NULL
+437	2701	fun5	NULL	128	NULL
+525	5265	park1	NULL	538	NULL
+534	6852	park2	NULL	325	NULL
+537	6653	park3	NULL	695	NULL
+550	5076	din1	NULL	259	NULL
+558	8698	din2	NULL	863	NULL
+571	6653	din3	NULL	864	NULL
+596	9561	din4	NULL	141	NULL
+
+-- Table: Staff --
+Staff_ID	Tourist_Attraction_ID	Name	Other_Details
+170	6476	Whitney	NULL
+219	6476	Kaela	NULL
+237	7067	Eunice	NULL
+249	5265	Kiarra	NULL
+310	9561	Phoebe	NULL
+433	9360	Vickie	NULL
+463	6653	Jannie	NULL
+470	6523	Lenore	NULL
+487	6852	Asia	NULL
+491	6852	Janet	NULL
+532	6852	Elouise	NULL
+591	9360	Gina	NULL
+595	8698	Beth	NULL
+596	2701	Ruthie	NULL
+604	6852	Aurore	NULL
+619	2113	Cortney	NULL
+643	6523	Astrid	NULL
+667	9561	Shemar	NULL
+860	6476	Trinity	NULL
+952	5265	Carmella	NULL
+
+-- Table: Tourist_Attraction_Features --
+Tourist_Attraction_ID	Feature_ID
+5076	528
+5076	681
+5265	523
+5265	955
+6476	543
+6476	681
+6476	955
+6523	528
+6852	528
+6852	955
+7067	543
+8429	681
+8449	528
+8698	528
+8698	543
+8698	681
+9561	681
+9919	681

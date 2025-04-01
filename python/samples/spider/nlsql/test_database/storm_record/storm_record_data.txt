@@ -1,0 +1,38 @@
+
+-- Table: storm --
+Storm_ID	Name	Dates_active	Max_speed	Damage_millions_USD	Number_Deaths
+1	One	May19–May25	995	13.0	0
+2	Two	August3–August10	972	10.75	7
+3	Three	August5–August14	972	13.0	52
+4	Four	August26–September2	961	4.05	7
+5	Five	September7–September17	988	1.49	3
+6	Six	September18–September25	1002	0.039	2
+7	Seven	September22–September28	977	13.0	0
+8	Eight	October20–October24	983	13.0	0
+9	Nine	October24–October26	1007	13.0	0
+10	9 cyclones	May19 –October26	961	29.3	71
+
+-- Table: region --
+Region_id	Region_code	Region_name
+1	AF	Afghanistan
+2	AL	Albania
+3	DZ	Algeria
+4	DS	American Samoa
+5	AD	Andorra
+6	AO	Angola
+7	AI	Anguilla
+8	AQ	Antarctica
+9	AG	Antigua and Barbuda
+10	CY	Cyprus
+11	CZ	Czech Republic
+12	DK	Denmark
+13	DJ	Djibouti
+
+-- Table: affected_region --
+Region_id	Storm_ID	Number_city_affected
+1	1	10.0
+2	1	15.0
+3	3	30.0
+1	4	22.0
+12	5	37.0
+2	5	12.0

@@ -1,0 +1,19 @@
+
+-- Table: bank --
+branch_ID	bname	no_of_customers	city	state
+1	morningside	203	New York City	New York
+2	downtown	123	Salt Lake City	Utah
+3	broadway	453	New York City	New York
+4	high	367	Austin	Texas
+
+-- Table: customer --
+cust_ID	cust_name	acc_type	acc_bal	no_of_loans	credit_score	branch_ID	state
+1	Mary	saving	2000	2	30	2	Utah
+2	Jack	checking	1000	1	20	1	Texas
+3	Owen	saving	800000	0	210	3	New York
+
+-- Table: loan --
+loan_ID	loan_type	cust_ID	branch_ID	amount
+1	Mortgages	1	1	2050
+2	Auto	1	2	3000
+3	Business	3	3	5000

@@ -1,0 +1,181 @@
+
+-- Table: Customers --
+customer_id	customer_details
+4	Mr. Raul Prosacco
+5	Esteban Senger
+16	Tyrique Durgan II
+17	Malcolm Farrell
+19	Sabryna Moore PhD
+21	Dr. Haylie Hilll III
+31	Monty Sauer III
+41	Jayme Marquardt
+63	Vincenza Price
+69	Elva Boehm
+76	Kyleigh Schuster
+79	Oma Smith
+82	Bridgette Nitzsche PhD
+87	Jeff McCullough MD
+91	Mackenzie Hettinger V
+
+-- Table: Properties --
+property_id	property_type_code	property_address	other_details
+24	apartment	85456 Annie Lodge Suite 449	USA
+107	house	2580 Yundt Plains	USA
+108	house	5983 Fleta Throughway	USA
+120	apartment	322 Johnston Parkway Suite 422	USA
+373	apartment	5384 Sipes Land Apt. 344	USA
+445	flat	04164 Raul Stream	USA
+586	apartment	54591 Bernard Ridges Suite 864	USA
+605	house	7713 Bode Burgs Apt. 113	USA
+629	house	830 Jayne Points Suite 290	USA
+669	house	824 Kiehn Vista	USA
+748	apartment	3927 Spinka Loaf Suite 347	USA
+791	house	72659 Frank Locks	USA
+849	house	76714 Verla Radial Apt. 306	USA
+879	flat	129 Chasity Brook	USA
+954	flat	91002 Melvina Haven	USA
+
+-- Table: Residents --
+resident_id	property_id	date_moved_in	date_moved_out	other_details
+6	954	2017-06-17 15:43:33	2017-12-18 03:46:04	Anderson Batz
+10	605	2015-03-27 12:00:00	2018-03-17 07:48:09	Miss Naomie Osinski
+23	879	2015-03-27 12:00:00	2017-11-14 06:28:48	Jess Wyman
+28	629	2015-03-27 12:00:00	2017-10-05 02:47:31	Miss Alanis Lockman
+37	669	2015-03-27 12:00:00	2018-01-30 10:20:59	Prof. Arvel Kozey
+38	748	2015-03-27 12:00:00	2017-12-30 23:55:10	Chaim Swaniawski
+43	108	2015-03-27 12:00:00	2018-02-22 06:24:15	Elroy Schuster
+45	954	2015-03-27 12:00:00	2017-10-14 10:23:42	Prof. Nasir Hoppe
+47	669	2015-03-27 12:00:00	2017-10-10 02:25:53	Tiffany Jaskolski
+58	107	2015-03-27 12:00:00	2017-11-29 21:24:08	Tomasa Hoeger
+67	120	2016-09-27 12:00:00	2017-10-23 16:40:19	Terrill Bernhard
+83	445	2016-09-27 12:00:00	2018-01-19 01:35:51	Loy Walter
+87	748	2016-09-27 12:00:00	2018-01-28 13:19:54	Mrs. Raphaelle Fisher
+88	107	2016-09-27 12:00:00	2018-02-03 11:30:20	Jacques Glover II
+90	373	2016-09-27 12:00:00	2017-11-19 03:11:44	Cassie Johnson
+
+-- Table: Organizations --
+organization_id	parent_organization_id	organization_details
+7	7	Reinger, Hudson and Nolan Group
+8	7	Denesik and Sons Party
+10	8	Robel-Schulist Group
+
+-- Table: Services --
+service_id	organization_id	service_type_code	service_details
+10	10	Cleanning	Satisfied
+11	7	Check	Satisfied
+13	8	Moving Out	Satisfied
+22	10	Pay bills	Satisfied
+29	8	Moving Out	Satisfied
+31	7	Pay bills	Satisfied
+36	8	Check	Satisfied
+41	10	Check	Satisfied
+47	8	Pay bills	Unsatisfied
+49	8	Moving Out	Satisfied
+52	8	Pay bills	Unsatisfied
+65	8	Cleanning	Unsatisfied
+66	8	Pay bills	Unsatisfied
+77	7	Pay bills	Unsatisfied
+87	8	Pay bills	Unsatisfied
+
+-- Table: Residents_Services --
+resident_id	service_id	date_moved_in	property_id	date_requested	date_provided	other_details
+6	49	2017-06-17 15:43:33	954	2016-07-25 01:32:23	2018-02-26 00:27:11	Satisfied
+23	41	2015-03-27 12:00:00	879	2016-10-10 21:42:21	2017-08-21 06:23:06	Unsatisfied
+28	11	2015-03-27 12:00:00	629	2017-07-14 19:03:47	2017-08-28 03:43:56	Unsatisfied
+43	10	2015-03-27 12:00:00	108	2016-09-20 22:50:26	2017-10-17 03:30:08	Unsatisfied
+45	49	2015-03-27 12:00:00	954	2017-06-14 14:04:50	2017-08-14 08:06:43	Unsatisfied
+47	65	2015-03-27 12:00:00	669	2016-12-16 06:08:10	2018-01-30 09:58:57	Unsatisfied
+67	87	2016-09-27 12:00:00	120	2016-04-27 14:51:07	2017-11-13 10:28:34	Unsatisfied
+83	65	2016-09-27 12:00:00	445	2016-11-27 15:37:02	2017-09-10 00:48:58	Unsatisfied
+87	29	2016-09-27 12:00:00	748	2016-10-13 04:15:54	2017-10-29 13:12:29	Unsatisfied
+90	36	2016-09-27 12:00:00	373	2016-04-13 05:09:24	2017-10-28 12:36:43	Unsatisfied
+88	11	2016-09-27 12:00:00	107	2016-06-18 20:09:24	2017-08-08 11:24:50	Unsatisfied
+
+-- Table: Things --
+thing_id	organization_id	Type_of_Thing_Code	service_type_code	service_details
+1	8	Electronics	Check	Unsatisfied
+2	8	Electronics	Cleanning	Satisfied
+10	8	Commen	Check	Satisfied
+14	10	Furniture	Cleanning	Satisfied
+26	8	Electronics	Cleanning	Unsatisfied
+35	7	Electronics	Cleanning	Satisfied
+45	8	Commen	Check	Satisfied
+46	8	Commen	Check	Satisfied
+47	10	Commen	Cleanning	Satisfied
+58	8	Electronics	Check	Satisfied
+68	10	Commen	Cleanning	Unsatisfied
+80	8	Furniture	Check	Unsatisfied
+84	8	Commen	Check	Unsatisfied
+85	8	Commen	Cleanning	Unsatisfied
+92	7	Commen	Check	Unsatisfied
+
+-- Table: Customer_Events --
+Customer_Event_ID	customer_id	date_moved_in	property_id	resident_id	thing_id
+70	19	2015-03-27 12:00:00	605	10	1
+160	5	2015-03-27 12:00:00	879	23	80
+166	16	2015-03-27 12:00:00	629	28	14
+216	79	2015-03-27 12:00:00	669	37	46
+226	19	2015-03-27 12:00:00	748	38	80
+256	79	2015-03-27 12:00:00	108	43	2
+428	63	2015-03-27 12:00:00	954	45	68
+530	4	2015-03-27 12:00:00	669	47	10
+559	19	2015-03-27 12:00:00	107	58	1
+591	91	2016-09-27 12:00:00	120	67	10
+606	31	2016-09-27 12:00:00	445	83	85
+627	91	2016-09-27 12:00:00	748	87	92
+817	19	2016-09-27 12:00:00	107	88	10
+
+-- Table: Customer_Event_Notes --
+Customer_Event_Note_ID	Customer_Event_ID	service_type_code	resident_id	property_id	date_moved_in
+18	70	Cleanning	58	107	2016-08-04 01:06:05
+21	428	Check	87	445	2016-12-11 01:05:14
+32	70	Check	37	669	2016-07-10 04:09:56
+46	627	Cleanning	87	373	2016-05-24 02:56:54
+49	559	Check	45	849	2016-08-08 07:58:26
+50	606	Check	45	849	2017-04-25 09:08:14
+55	817	Cleanning	43	120	2017-06-26 13:24:36
+56	216	Check	88	748	2016-11-04 12:46:21
+59	591	Cleanning	28	605	2016-05-14 15:58:33
+65	591	Cleanning	28	879	2017-04-12 19:47:08
+75	70	Check	43	120	2016-10-28 01:43:42
+88	606	Cleanning	67	791	2016-11-23 05:53:40
+91	817	Cleanning	43	120	2017-04-28 10:17:13
+
+-- Table: Timed_Status_of_Things --
+thing_id	Date_and_Date	Status_of_Thing_Code
+2	2016-05-27 23:33:34	Open
+2	2016-07-17 08:35:27	Close
+2	2017-06-19 02:59:21	In Progress
+10	2016-09-06 16:31:13	Close
+10	2016-11-14 17:30:51	Open
+14	2017-07-03 02:22:12	In Progress
+26	2016-04-10 06:32:15	Close
+26	2017-08-05 02:10:02	In Progress
+26	2018-02-04 02:44:39	Close
+35	2017-11-27 06:32:46	In Progress
+47	2016-04-02 00:57:17	In Progress
+47	2016-12-02 11:08:16	Close
+58	2017-05-31 00:52:33	In Progress
+80	2016-10-08 08:02:57	Open
+84	2017-12-28 16:05:08	Open
+85	2017-03-24 12:12:46	Close
+92	2016-11-24 12:44:00	In Progress
+92	2017-09-27 01:35:51	Close
+
+-- Table: Timed_Locations_of_Things --
+thing_id	Date_and_Time	Location_Code
+2	2016-10-12 12:03:07	064 Charles Mou
+10	2016-12-29 00:39:19	288 Lang Ferry
+10	2017-10-21 04:21:54	854 Keeling Sho
+14	2017-03-19 19:28:13	1316 Morgan Spr
+26	2016-04-26 16:34:09	192 Kub Rapids
+45	2017-04-19 16:41:03	4667 Kellen Fie
+45	2017-04-22 00:37:48	1313 Sawayn Riv
+58	2016-08-04 00:25:55	94425 Nellie Kn
+68	2017-03-06 01:56:27	4223 Rae Fork S
+68	2017-08-31 13:54:13	9628 Bins Islan
+85	2016-11-07 09:43:05	2677 Runolfsson
+85	2017-01-02 23:26:47	26281 Holden Pa
+85	2017-11-26 00:13:44	1537 Schmeler G
+92	2017-03-19 13:57:49	113 Geo Glens A
+92	2017-10-21 21:35:37	9569 Tanner Inl

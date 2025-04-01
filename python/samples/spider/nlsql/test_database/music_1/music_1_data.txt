@@ -1,0 +1,36 @@
+
+-- Table: genre --
+g_name	rating	most_popular_in
+tagore	8	Bangladesh
+nazrul	7	Bangladesh
+folk	9	Sylhet,Chittagong,Kustia
+modern	8	Bangladesh
+blues	7	Canada
+pop	9	America
+
+-- Table: artist --
+artist_name	country	gender	preferred_genre
+Shrikanta	India	Male	tagore
+Prity	Bangladesh	Female	nazrul
+Farida	Bangladesh	Female	folk
+Topu	India	Female	modern
+Enrique	USA	Male	blues
+Michel	UK	Male	pop
+
+-- Table: files --
+f_id	artist_name	file_size	duration	formats
+1	Shrikanta	3.78 MB	3:45	mp4
+2	Prity	4.12 MB	2:56	mp3
+3	Farida	3.69 MB	4:12	mp4
+4	Enrique	4.58 MB	5:23	mp4
+5	Michel	5.10 MB	4:34	mp3
+6	Topu	4.10 MB	4:30	mp4
+
+-- Table: song --
+song_name	artist_name	country	f_id	genre_is	rating	languages	releasedate	resolution
+Tumi robe nirobe	Shrikanta	India	1	tagore	8	bangla	28-AUG-2011	1080
+Shukno patar nupur pae	Prity	Bangladesh	2	nazrul	5	bangla	21-SEP-1997	512
+Ami opar hoye	Farida	Bangladesh	3	folk	7	bangla	7-APR-2001	320
+My love	Enrique	USA	4	blues	6	english	24-JAN-2007	1080
+Just beat it	Michel	UK	5	pop	8	english	17-MAR-2002	720
+Aj ei akash	Topu	India	6	modern	10	bangla	27-MAR-2004	320

@@ -1,0 +1,45 @@
+
+-- Table: author --
+aid	homepage	name	oid
+
+-- Table: conference --
+cid	homepage	name
+
+-- Table: domain --
+did	name
+
+-- Table: domain_author --
+aid	did
+
+-- Table: domain_conference --
+cid	did
+
+-- Table: journal --
+homepage	jid	name
+
+-- Table: domain_journal --
+did	jid
+
+-- Table: keyword --
+keyword	kid
+
+-- Table: domain_keyword --
+did	kid
+
+-- Table: publication --
+abstract	cid	citation_num	jid	pid	reference_num	title	year
+
+-- Table: domain_publication --
+did	pid
+
+-- Table: organization --
+continent	homepage	name	oid
+
+-- Table: publication_keyword --
+pid	kid
+
+-- Table: writes --
+aid	pid
+
+-- Table: cite --
+cited	citing

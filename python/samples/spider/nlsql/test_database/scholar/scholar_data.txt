@@ -1,0 +1,30 @@
+
+-- Table: venue --
+venueId	venueName
+
+-- Table: author --
+authorId	authorName
+
+-- Table: dataset --
+datasetId	datasetName
+
+-- Table: journal --
+journalId	journalName
+
+-- Table: keyphrase --
+keyphraseId	keyphraseName
+
+-- Table: paper --
+paperId	title	venueId	year	numCiting	numCitedBy	journalId
+
+-- Table: cite --
+citingPaperId	citedPaperId
+
+-- Table: paperDataset --
+paperId	datasetId
+
+-- Table: paperKeyphrase --
+paperId	keyphraseId
+
+-- Table: writes --
+paperId	authorId

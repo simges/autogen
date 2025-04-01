@@ -1,0 +1,59 @@
+
+-- Table: Document_Subsets --
+Document_Subset_ID	Document_Subset_Name	Document_Subset_Details
+171	Best for 2000	
+183	Best for 2001	
+216	Best for 2002	
+488	Best for 2003	
+535	Best for 2004	
+547	Best for 2005	
+640	Best for 2006	
+653	Best for 2007	
+
+-- Table: Collection_Subsets --
+Collection_Subset_ID	Collection_Subset_Name	Collecrtion_Subset_Details
+684	UK album	
+717	US album	
+741	Canadian album	
+813	History collection	
+851	Art collection	
+981	Top collection	
+997	Fine set	
+
+-- Table: Document_Objects --
+Document_Object_ID	Parent_Document_Object_ID	Owner	Description	Other_Details
+5	5	Ransom	Ransom Collection	NULL
+8	9	Marlin	Marlin Collection	NULL
+9	9	Braeden	Braeden Collection	NULL
+
+-- Table: Collections --
+Collection_ID	Parent_Collection_ID	Collection_Name	Collection_Description
+6	6	Best	NULL
+7	6	Nice	NULL
+
+-- Table: Documents_in_Collections --
+Document_Object_ID	Collection_ID
+5	6
+5	7
+8	6
+8	7
+9	6
+9	7
+
+-- Table: Document_Subset_Members --
+Document_Object_ID	Related_Document_Object_ID	Document_Subset_ID
+5	5	547
+5	8	183
+5	9	653
+8	5	183
+8	8	653
+8	9	216
+9	5	171
+9	8	171
+
+-- Table: Collection_Subset_Members --
+Collection_ID	Related_Collection_ID	Collection_Subset_ID
+6	6	717
+6	7	981
+7	6	851
+7	7	851

@@ -1,0 +1,21 @@
+
+-- Table: state --
+state_name	population	area	country_name	capital	density
+
+-- Table: city --
+city_name	population	country_name	state_name
+
+-- Table: border_info --
+state_name	border
+
+-- Table: highlow --
+state_name	highest_elevation	lowest_point	highest_point	lowest_elevation
+
+-- Table: lake --
+lake_name	area	country_name	state_name
+
+-- Table: mountain --
+mountain_name	mountain_altitude	country_name	state_name
+
+-- Table: river --
+river_name	length	country_name	traverse
